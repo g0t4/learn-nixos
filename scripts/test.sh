@@ -2,4 +2,4 @@
 #! nix-shell -i bash --pure
 #! nix-shell -p bash cacert curl jq
 
-curl -s https://mcr.microsoft.com/v2/_catalog | jq .
+curl -fsSL https://mcr.microsoft.com/v2/_catalog | jq .
