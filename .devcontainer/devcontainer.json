@@ -10,7 +10,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"jnoortheen.nix-ide"
+				"jnoortheen.nix-ide",
+				"bbenoist.Nix"
 			]
 		}
 	}
