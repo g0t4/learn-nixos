@@ -25,6 +25,9 @@ stdenv.mkDerivation {
     cp icat $out/bin
   '';
 
+  # w00t this worked in vscode terminal inside devcontainer w/ nix feature:
+  # ./result-2/bin/icat test.png
+
 }
 
 ## FYI I stumbled on nixfmt tool:
