@@ -1,8 +1,6 @@
 # icat.nix
 { lib, stdenv, fetchFromGitHub }:
 
-# 
-
 stdenv.mkDerivation {
   name = "hello";
 
