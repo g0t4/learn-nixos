@@ -11,6 +11,7 @@
 
 			"packages": [ "nixpkgs-fmt" ]
 			// nixpkgs-fmt for the extension to support formatting
+			// FYI list packages installed:   `nix-env --query`
 		}
 
 	},

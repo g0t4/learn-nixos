@@ -1,8 +1,14 @@
 # icat.nix
-{ lib, stdenv, fetchFromGitHub }:
+{ lib, stdenv, fetchFromGitHub, pkgs ? import <nixpkgs> { } }:
+
 
 stdenv.mkDerivation {
   name = "hello";
+
+  # install dependency imlib2:
+  # using nix language:
+
+  buildInputs = [ pkgs.imlib2 ];
 
   src = fetchFromGitHub {
     owner = "atextor";
