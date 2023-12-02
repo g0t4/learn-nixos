@@ -5,10 +5,10 @@
 stdenv.mkDerivation {
   name = "hello";
 
-  # install dependency imlib2:
-  # using nix language:
-
-  buildInputs = [ pkgs.imlib2 ];
+  buildInputs = [
+    pkgs.imlib2
+    pkgs.xorg.libX11
+  ];
 
   src = fetchFromGitHub {
     owner = "atextor";
