@@ -5,7 +5,9 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 	"features": {
-		"ghcr.io/devcontainers/features/nix:1": {}
+		"ghcr.io/devcontainers/features/nix:1": {
+			"packages": [ "nixpkgs-fmt" ]
+		}
 		// TODO is there some setting to install nix packages? 
 		// i.e. nixpkgs-fmt for the extension to support formatting
 		//  feature docs: https://github.com/devcontainers/features/tree/main/src/nix
