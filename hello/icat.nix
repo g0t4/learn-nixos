@@ -16,5 +16,6 @@ stdenv.mkDerivation {
   };
 }
 
-## FYI I stumbled on nixfmt tool mentioned and it installs with nix-env -i nixfmt!
-#  then nixfmt icat.nix
+## FYI I stumbled on nixfmt tool:
+#   nix-env -i nixfmt
+#   nixfmt *.nix
