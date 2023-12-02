@@ -18,6 +18,13 @@ stdenv.mkDerivation {
     #   FYI if not unpacked the shasum will be different, we need shasum of unpacked source
     sha256 = "0wyy2ksxp95vnh71ybj1bbmqd5ggp13x3mk37pzr99ljs9awy8ka";
   };
+
+  # install target missing in makefile for icat...
+  installPhase = ''
+    mkdir -p $out/bin
+    cp icat $out/bin
+  '';
+
 }
 
 ## FYI I stumbled on nixfmt tool:
