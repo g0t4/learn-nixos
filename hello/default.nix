@@ -1,8 +1,6 @@
 # default.nix
-let
-  pkgs = import <nixpkgs> { };
-in
-{
+let pkgs = import <nixpkgs> { };
+in {
   hello = pkgs.callPackage ./hello.nix { };
-  icat = pkgs.callPackage ./icat.nix { }; 
+  icat = pkgs.callPackage ./icat.nix { };
 }

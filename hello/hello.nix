@@ -1,8 +1,5 @@
 # hello.nix
-{ lib
-, stdenv
-, fetchzip
-}:
+{ lib, stdenv, fetchzip }:
 
 stdenv.mkDerivation {
   name = "hello";
