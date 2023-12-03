@@ -17,11 +17,18 @@ stdenv.mkDerivation {
     hash = "sha256-ZMW5dcooeTnoKDA/qFfSLxQrJR8XgI3+QXM1EtnN7YY=";
   };
 
+  # FYI official nixpkgs.nginx derivation:
+  # - https://github.com/NixOS/nixpkgs/blob/master/pkgs/servers/http/nginx/generic.nix
+
   # nginx compilation docs:
   # - configure options:
   #     https://nginx.org/en/docs/configure.html
   # - compile guide:
   #     https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#sources
+  configureFlags = [
+    "--with-debug"
+  ];
+  # FYI:   ./result/bin/nginx -V
 
   buildInputs = [
     # listed in comile guide:
