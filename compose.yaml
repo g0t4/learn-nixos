@@ -1,0 +1,7 @@
+services:
+  nix:
+    build: ./compose
+    # NOTE: /src is for runtime only (not build time, hence ./compose is context for build)
+    volumes:
+      - ./:/src
+    working_dir: /src
