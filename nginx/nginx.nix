@@ -20,15 +20,22 @@ stdenv.mkDerivation {
   # FYI official nixpkgs.nginx derivation:
   # - https://github.com/NixOS/nixpkgs/blob/master/pkgs/servers/http/nginx/generic.nix
 
-  # nginx compilation docs:
-  # - configure options:
-  #     https://nginx.org/en/docs/configure.html
+  # nginx docs:
   # - compile guide:
   #     https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#sources
+  # - configure options:
+  #     https://nginx.org/en/docs/configure.html
+  #     FYI:   ./result/bin/nginx -V
   configureFlags = [
     "--with-debug"
   ];
-  # FYI:   ./result/bin/nginx -V
+  #     FYI nix sets prefix to nix store:  `--prefix=/nix/store/q6hd7knr2zrnn47sbyr07qm5yqzbz9j2-nginx`
+
+  ## RUN:
+  #   ./result/bin/nginx
+  #         OR  ./result/bin/nginx -g "daemon off;"
+  #   ./result/bin/nginx -s stop
+  #   ./result/bin/nginx -s reload
 
   buildInputs = [
     # listed in comile guide:
